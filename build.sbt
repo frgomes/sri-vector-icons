@@ -4,16 +4,16 @@ name := "vector-icons"
 
 enablePlugins(ScalaJSPlugin)
 
-val scala211 = "2.11.8"
+val scala211 = "2.11.11"
 
-val scala212 = "2.12.1"
+val scala212 = "2.12.2"
 
 scalaVersion := scala211
 
 crossScalaVersions := Seq(scala211, scala212)
 
-libraryDependencies += "scalajs-react-interface" %%% "core" % "2017.3.23-beta" % Provided
-libraryDependencies += "scalajs-react-interface" %%% "universal" % "2017.3.23-beta" % Provided
+libraryDependencies += "scalajs-react-interface" %%% "core" % "2017.4.23-beta" % Provided
+libraryDependencies += "scalajs-react-interface" %%% "universal" % "2017.4.23-beta" % Provided
 
 scalacOptions ++= Seq(
   "-feature",
