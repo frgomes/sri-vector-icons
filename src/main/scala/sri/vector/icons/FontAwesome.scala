@@ -5,6 +5,7 @@ import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
+import scala.scalajs.js.|
 
 object FontAwesome {
 
@@ -13,8 +14,9 @@ object FontAwesome {
       name: OptionalParam[FontAwesomeName] = OptDefault,
       style: OptionalParam[js.Any] = OptDefault,
       color: OptionalParam[String] = OptDefault,
-      size: OptionalParam[Double] = OptDefault
+      size: OptionalParam[Double | Int] = OptDefault
   ): ReactElement = {
+    import sri.universal.DangerousUnionToJSAnyImplicit._
     val p = FunctionObjectMacro()
     CreateElementJS[FontAwesomeComponent.type](FontAwesomeComponent, p)
   }
