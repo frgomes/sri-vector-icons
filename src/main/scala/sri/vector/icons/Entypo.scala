@@ -1,30 +1,13 @@
 package sri.vector.icons
 
-import sri.core.{CreateElementJS, JSComponent, ReactClass, ReactElement}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
-
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
-import scala.scalajs.js.|
 
-object Entypo {
-
-  @inline
-  def apply(
-      name: OptionalParam[EntypoIconName] = OptDefault,
-      style: OptionalParam[js.Any] = OptDefault,
-      color: OptionalParam[String] = OptDefault,
-      size: OptionalParam[Double | Int] = OptDefault
-  ): ReactElement = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
-    val p = FunctionObjectMacro()
-    CreateElementJS[EntypoComponent.type](EntypoComponent, p)
-  }
-}
+object Entypo extends VectorIcons(EntypoComponent)
 
 @js.native
 @JSImport("react-native-vector-icons/Entypo", JSImport.Default)
-object EntypoComponent extends JSComponent[js.Object]
+object EntypoComponent extends VectorIconsComponent[EntypoIconName]
 
 @ScalaJSDefined
 trait EntypoIconName extends js.Object

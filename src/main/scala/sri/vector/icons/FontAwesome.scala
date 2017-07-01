@@ -1,30 +1,13 @@
 package sri.vector.icons
 
-import sri.core.{CreateElementJS, JSComponent, ReactElement}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
-
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
-import scala.scalajs.js.|
 
-object FontAwesome {
-
-  @inline
-  def apply(
-      name: OptionalParam[FontAwesomeName] = OptDefault,
-      style: OptionalParam[js.Any] = OptDefault,
-      color: OptionalParam[String] = OptDefault,
-      size: OptionalParam[Double | Int] = OptDefault
-  ): ReactElement = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
-    val p = FunctionObjectMacro()
-    CreateElementJS[FontAwesomeComponent.type](FontAwesomeComponent, p)
-  }
-}
+object FontAwesome extends VectorIcons(FontAwesomeComponent)
 
 @js.native
 @JSImport("react-native-vector-icons/FontAwesome", JSImport.Default)
-object FontAwesomeComponent extends JSComponent[js.Object] {}
+object FontAwesomeComponent extends VectorIconsComponent[FontAwesomeName]
 
 @ScalaJSDefined
 trait FontAwesomeName extends js.Object
