@@ -13,7 +13,8 @@ scalaVersion := scala211
 crossScalaVersions := Seq(scala211, scala212)
 
 libraryDependencies += "scalajs-react-interface" %%% "core" % "2017.4.23-beta" % Provided
-libraryDependencies += "scalajs-react-interface" %%% "universal" % "2017.4.23-beta" % Provided
+libraryDependencies += "scalajs-react-interface" %%% "universal" % "2017.5.2-beta" % Provided
+libraryDependencies += "scalajs-react-interface" %%% "mobile" % "2017.5.2-beta" % Provided
 
 scalacOptions ++= Seq(
   "-feature",

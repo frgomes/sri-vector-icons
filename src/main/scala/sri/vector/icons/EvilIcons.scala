@@ -1,30 +1,13 @@
 package sri.vector.icons
 
-import sri.core.{CreateElementJS, JSComponent, ReactElement}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
-
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
-import scala.scalajs.js.|
 
-object EvilIcons {
-
-  @inline
-  def apply(
-      name: OptionalParam[EvilIconsName] = OptDefault,
-      style: OptionalParam[js.Any] = OptDefault,
-      color: OptionalParam[String] = OptDefault,
-      size: OptionalParam[Double | Int] = OptDefault
-  ): ReactElement = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
-    val p = FunctionObjectMacro()
-    CreateElementJS[EvilIconsComponent.type](EvilIconsComponent, p)
-  }
-}
+object EvilIcons extends VectorIcons(EvilIconsComponent)
 
 @js.native
 @JSImport("react-native-vector-icons/EvilIcons", JSImport.Default)
-object EvilIconsComponent extends JSComponent[js.Object] {}
+object EvilIconsComponent extends VectorIconsComponent[EvilIconsName]
 
 @ScalaJSDefined
 trait EvilIconsName extends js.Object

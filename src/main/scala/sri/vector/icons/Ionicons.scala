@@ -1,30 +1,13 @@
 package sri.vector.icons
 
-import sri.core.{CreateElementJS, JSComponent, ReactElement}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
-
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
-import scala.scalajs.js.|
 
-object Ionicons {
-
-  @inline
-  def apply(
-      name: OptionalParam[IoniconsName] = OptDefault,
-      style: OptionalParam[js.Any] = OptDefault,
-      color: OptionalParam[String] = OptDefault,
-      size: OptionalParam[Double | Int] = OptDefault
-  ): ReactElement = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
-    val p = FunctionObjectMacro()
-    CreateElementJS[IoniconsComponent.type](IoniconsComponent, p)
-  }
-}
+object Ionicons extends VectorIcons(IoniconsComponent)
 
 @js.native
 @JSImport("react-native-vector-icons/Ionicons", JSImport.Default)
-object IoniconsComponent extends JSComponent[js.Object] {}
+object IoniconsComponent extends VectorIconsComponent[IoniconsName]
 
 @ScalaJSDefined
 trait IoniconsName extends js.Object
