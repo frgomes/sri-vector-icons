@@ -9,7 +9,6 @@ object Ionicons extends VectorIcons(IoniconsComponent)
 @JSImport("react-native-vector-icons/Ionicons", JSImport.Default)
 object IoniconsComponent extends VectorIconsComponent[IoniconsName]
 
-@ScalaJSDefined
 trait IoniconsName extends js.Object
 
 object IoniconsList {

@@ -9,7 +9,6 @@ object FontAwesome extends VectorIcons(FontAwesomeComponent)
 @JSImport("react-native-vector-icons/FontAwesome", JSImport.Default)
 object FontAwesomeComponent extends VectorIconsComponent[FontAwesomeName]
 
-@ScalaJSDefined
 trait FontAwesomeName extends js.Object
 
 object FontAwesomeList {

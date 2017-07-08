@@ -9,7 +9,6 @@ object Entypo extends VectorIcons(EntypoComponent)
 @JSImport("react-native-vector-icons/Entypo", JSImport.Default)
 object EntypoComponent extends VectorIconsComponent[EntypoIconName]
 
-@ScalaJSDefined
 trait EntypoIconName extends js.Object
 
 object EntypoList {

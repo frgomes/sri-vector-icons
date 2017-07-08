@@ -9,7 +9,6 @@ object MaterialIcons extends VectorIcons(MaterialIconsComponent)
 @JSImport("react-native-vector-icons/MaterialIcons", JSImport.Default)
 object MaterialIconsComponent extends VectorIconsComponent[MaterialIconsName]
 
-@ScalaJSDefined
 trait MaterialIconsName extends js.Object
 
 object MaterialIconsList {

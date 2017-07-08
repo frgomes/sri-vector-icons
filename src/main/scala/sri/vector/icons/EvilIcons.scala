@@ -9,7 +9,6 @@ object EvilIcons extends VectorIcons(EvilIconsComponent)
 @JSImport("react-native-vector-icons/EvilIcons", JSImport.Default)
 object EvilIconsComponent extends VectorIconsComponent[EvilIconsName]
 
-@ScalaJSDefined
 trait EvilIconsName extends js.Object
 
 object EvilIconsList {
