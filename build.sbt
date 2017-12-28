@@ -68,8 +68,9 @@ def runJest() = {
   if (jestResult != 0) throw new IllegalStateException("Jest Suite failed")
 }
 
-resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
-resolvers += Resolver.bintrayRepo("scalajs-jest", "maven")
+resolvers ++=Seq(Resolver.bintrayRepo("scalajs-react-interface", "maven"),
+  Resolver.bintrayRepo("scalajs-jest", "maven"),
+  Resolver.bintrayRepo("scalajs-plus", "maven"))
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.4" % Test,
