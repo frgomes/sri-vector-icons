@@ -6,7 +6,6 @@ import sri.mobile.components.android.{
 }
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.|
 
 trait VectorIconsProps[N <: js.Object] extends js.Object {

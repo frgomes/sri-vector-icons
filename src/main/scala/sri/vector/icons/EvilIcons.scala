@@ -1,7 +1,7 @@
 package sri.vector.icons
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSImport, ScalaJSDefined}
+import scala.scalajs.js.annotation.{JSImport}
 
 object EvilIcons extends VectorIcons(EvilIconsComponent)
 

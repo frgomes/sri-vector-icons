@@ -1,7 +1,12 @@
 package sri.vector.icons
 
 import sri.core.{CreateElementJS, JSComponent, ReactElement, ReactNode}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam, exclude}
+import scalajsplus.macros.{
+  FunctionObjectMacro,
+  rename,
+exclude
+}
+import scalajsplus.{OptDefault, OptionalParam}
 import sri.universal.MergeJSObjects
 import sri.mobile.components.android.ToolbarAndroidActionShow
 
@@ -35,7 +40,7 @@ class VectorIcons[N <: js.Object](val icons: VectorIconsComponent[N]) {
             @exclude key: String | Int = null,
             @exclude ref: js.Function1[icons.type, Unit] = null)
     : ReactElement { type Instance = icons.type } = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val props = FunctionObjectMacro()
     extraProps.foreach(v => { MergeJSObjects(props, v) })
     CreateElementJS[icons.type](
@@ -57,7 +62,7 @@ class VectorIcons[N <: js.Object](val icons: VectorIconsComponent[N]) {
              @exclude ref: js.Function1[icons.Button.type, Unit] = null)(
       children: ReactNode*)
     : ReactElement { type Instance = icons.Button.type } = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val props = FunctionObjectMacro()
     extraProps.foreach(v => { MergeJSObjects(props, v) })
     CreateElementJS[icons.Button.type](
@@ -88,7 +93,7 @@ class VectorIcons[N <: js.Object](val icons: VectorIconsComponent[N]) {
       @exclude key: String | Int = null,
       @exclude ref: js.Function1[icons.ToolbarAndroid.type, Unit] = null)
     : ReactElement { type Instance = icons.ToolbarAndroid.type } = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val props = FunctionObjectMacro()
     extraProps.foreach(v => { MergeJSObjects(props, v) })
     CreateElementJS[icons.ToolbarAndroid.type](

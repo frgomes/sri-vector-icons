@@ -2,7 +2,7 @@ package sri.vector.icons
 
 class SimpleTest extends BaseTest {
 
-  test("simple", () => {
+  test("simple") {
     expect(true).toBeTruthy()
-  })
+  }
 }
