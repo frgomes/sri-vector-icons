@@ -12,9 +12,9 @@ scalaVersion := scala212
 crossScalaVersions := Seq(scala212)
 
 libraryDependencies ++= Seq(
-  "scalajs-react-interface" %%% "core" % "2017.12.28-RC" % Provided,
-  "scalajs-react-interface" %%% "mobile" % "2017.12.28-RC" % Provided,
-  "scalajs-react-interface" %%% "universal" % "2017.12.28-RC" % Provided
+  "scalajs-react-interface" %%% "core" % "2018.2.2-RC" % Provided,
+  "scalajs-react-interface" %%% "mobile" % "2018.2.2-RC" % Provided,
+  "scalajs-react-interface" %%% "universal" % "2018.2.2-RC" % Provided
 )
 
 scalacOptions ++= Seq(
@@ -74,7 +74,7 @@ resolvers ++=Seq(Resolver.bintrayRepo("scalajs-react-interface", "maven"),
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.4" % Test,
-  "scalajs-jest" %%% "core" % "2017.12.27-RC" % Test
+  "scalajs-jest" %%% "core" % "2018.2.2-RC" % Test
 )
 //scalaJSStage in Global := FastOptStage
 scalaJSStage in Global := FullOptStage
